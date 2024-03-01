@@ -123,11 +123,12 @@ const Live = () => {
       reaction,
       isPressed: false
     })
-  })
+  }, [])
 
   return (
-    <div onPointerMove={handlePointerMove} onPointerUp={handlePointerUp} onPointerLeave={handlePointerLeave} onPointerDown={handlePointerDown} className="h-screen w-screen">
-      <div>Figma Clone</div>
+    <div onPointerMove={handlePointerMove} onPointerUp={handlePointerUp} onPointerLeave={handlePointerLeave} onPointerDown={handlePointerDown} className="h-screen w-screen flex justify-center items-center">
+
+      <canvas />
 
       {reaction.map((r) => (
         <FlyingReaction key={r.timestamp.toString()} x={r.point.x} y={r.point.y} timestamp={r.timestamp} value={r.value} />
