@@ -28,7 +28,6 @@ const ActiveUsers = () => {
 
                     {hasMoreUsers && <div className={styles.more}>+{users.length - 3}</div>}
 
-
                 </div>
             </main>
         )
